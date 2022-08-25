@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reclists",
+  "info": {
+    "singularName": "reclist",
+    "pluralName": "reclists",
+    "displayName": "Reclist"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "movie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::movie.movie",
+      "inversedBy": "reclists"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reclists"
+    }
+  }
+}

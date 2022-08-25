@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "regisseurs",
+  "info": {
+    "singularName": "regisseur",
+    "pluralName": "regisseurs",
+    "displayName": "regisseur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "movies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movie.movie",
+      "mappedBy": "regisseur"
+    }
+  }
+}

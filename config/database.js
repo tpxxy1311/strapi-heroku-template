@@ -3,7 +3,7 @@
 const { parse } = require("pg-connection-string");
 
 module.exports = ({ env }) => {
-  const { host, port, database, user, password } = parse(env("DATABASE_URL"));
+  const { host, port, database, user, password } = parse("postgres://kzgfjcbjdwbggr:ca4eba89b585c7a90eefe4389c427549de0343649bc4958d62851e2b3080eabc@ec2-99-81-137-11.eu-west-1.compute.amazonaws.com:5432/d9mjfahoq3vfn7");
 
   return {
     connection: {
