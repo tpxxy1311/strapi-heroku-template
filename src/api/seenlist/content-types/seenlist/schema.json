@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seenlists",
+  "info": {
+    "singularName": "seenlist",
+    "pluralName": "seenlists",
+    "displayName": "Seenlist"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "movie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::movie.movie",
+      "inversedBy": "seenlists"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "seenlists"
+    }
+  }
+}

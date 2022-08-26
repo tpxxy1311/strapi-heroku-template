@@ -62,6 +62,12 @@
       "relation": "oneToMany",
       "target": "api::reclist.reclist",
       "mappedBy": "movie"
+    },
+    "seenlists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seenlist.seenlist",
+      "mappedBy": "movie"
     }
   }
 }

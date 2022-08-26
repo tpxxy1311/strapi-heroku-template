@@ -83,6 +83,12 @@
       "relation": "oneToMany",
       "target": "api::reclist.reclist",
       "mappedBy": "user"
+    },
+    "seenlists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seenlist.seenlist",
+      "mappedBy": "user"
     }
   }
 }
